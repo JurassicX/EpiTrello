@@ -1,7 +1,11 @@
-const IdPage = () => {
+const IdPage = ({
+    params,
+}: {
+    params: { id: string}
+}) => {
     return (
         <div>
-            ID page!
+            ID: {params.id}
         </div>
     );
 };
