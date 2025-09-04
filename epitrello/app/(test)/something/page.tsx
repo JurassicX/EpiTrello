@@ -6,4 +6,4 @@ const Something = () => {
     );
 };
 
-export default Something
+export default Something;
