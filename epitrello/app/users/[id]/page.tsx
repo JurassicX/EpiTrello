@@ -10,4 +10,4 @@ const IdPage = ({
     );
 };
 
-export default IdPage
+export default IdPage;
