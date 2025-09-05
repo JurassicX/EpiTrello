@@ -5,7 +5,7 @@ const MarketingLayout = ({
 }) => {
     return (
         <div className="h-full bg-slate-100">
-            <main className="pt-40 pb-20 bg-blue-700">
+            <main className="pt-40 pb-20 bg-blue-500">
                 {children}
             </main>
         </div>
