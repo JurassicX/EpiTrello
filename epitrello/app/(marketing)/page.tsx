@@ -43,7 +43,10 @@ const MarketingPage = () => {
                     work forward.
                 </div>
             </div>
-            <div className="text-sm md:text-xl text-black mt-4 max-w-xs md:max-w-2xl text-center mx-auto">
+            <div className={cn(
+                "text-sm md:text-xl text-black mt-4 max-w-xs md:max-w-2xl text-center mx-auto",
+                textFont.className
+            )}>
                 Colaborate, manage project and reach new productivity peaks. From high rises to the home office, the way your team works is unique - accomplish it all with EpiTrello.
             </div>
             <Button className="mt-6" size={"lg"} asChild>
