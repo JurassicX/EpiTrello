@@ -5,7 +5,7 @@ import localFont from "next/font/local"
 import { cn } from "@/lib/utils"
 
 const headingFont = localFont({
-    src: "../../public/fonts/CalSans-Regular.ttf"
+    src: "../public/fonts/CalSans-Regular.ttf"
 });
 
 export const Logo = () => {
@@ -21,7 +21,7 @@ export const Logo = () => {
                 <p className={cn("text-lg text-neutral-700 pb-1",
                     headingFont.className
                 )}>
-                    Epitrello
+                    EpiTrello
                 </p>
             </div>
         </Link>
