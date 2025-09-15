@@ -15,8 +15,8 @@ export const Logo = () => {
                 <Image
                 src="/logo_epitech.png"
                 alt="Logo"
-                height={30}
-                width={30}
+                height={100}
+                width={100}
                 />
                 <p className={cn("text-lg text-neutral-700 pb-1",
                     headingFont.className
