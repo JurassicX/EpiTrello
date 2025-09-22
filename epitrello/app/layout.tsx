@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: [
+    {
+      url: "/epitech_logo_small_light.png",
+      href: "/epitech_logo_small_light.png",
+    }
+  ]
 };
 
 export default function RootLayout({
