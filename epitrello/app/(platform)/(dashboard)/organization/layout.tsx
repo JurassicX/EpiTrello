@@ -1,3 +1,5 @@
+import { Sidebar } from "../_components/sidebar";
+
 const OrganizationLayout = ({
     children
 }: {
