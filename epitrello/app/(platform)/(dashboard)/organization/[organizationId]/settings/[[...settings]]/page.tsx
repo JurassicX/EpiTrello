@@ -10,7 +10,7 @@ const settingsPage = () => {
                             boxShadow: "none",
                             width: "100%"
                         },
-                        card: {
+                        cardBox: {
                             border: "1px solid #e5e5e5",
                             boxShadow: "none",
                             width: "100%"
