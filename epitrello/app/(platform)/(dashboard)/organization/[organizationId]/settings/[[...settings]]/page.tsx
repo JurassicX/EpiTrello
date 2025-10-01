@@ -3,7 +3,7 @@ import { OrganizationProfile } from "@clerk/nextjs";
 const settingsPage = () => {
     return (
         <div className="w-full">
-            <OrganizationProfile routing="hash"
+            <OrganizationProfile
                 appearance={{
                     elements: {
                         rootBox: {
