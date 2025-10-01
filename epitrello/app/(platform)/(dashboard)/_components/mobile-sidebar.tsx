@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { useMobileSidebar } from "@/hooks/use-mobile-sidebar";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 
 import { Sidebar } from "./sidebar";
 
@@ -48,6 +48,9 @@ export const MobileSidebar = () => {
                     <Sidebar 
                         storageKey="et-sidebar-mobile-state"
                     />
+                    <SheetTitle className="sr-only"> /* sheet title is needed or I get an error sr-only make it invisible completly*/
+                        sheet title
+                    </SheetTitle>
                 </SheetContent>
             </Sheet>
         </>
