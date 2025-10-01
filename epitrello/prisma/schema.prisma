@@ -13,3 +13,9 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Board {
+  id String @id @default(uuid())
+
+  title String
+}
