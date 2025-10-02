@@ -18,7 +18,7 @@ export const FormInput = ({ errors }: FormInputProps) => {
                 id="title"
                 name="title"
                 required
-                placeholder=" Enter a board name."
+                placeholder=" Enter a board name/title."
                 disabled={pending}
             />
             {errors?.title ? (
