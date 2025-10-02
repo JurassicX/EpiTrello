@@ -4,7 +4,7 @@ const OrganizationIdPage = () => {
 
     return (
         <div className="w-full">
-            <form action={create} className="">
+            <form action={create}>
                 <input
                     id="title"
                     name="title"
