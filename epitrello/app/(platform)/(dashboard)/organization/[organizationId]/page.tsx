@@ -1,4 +1,5 @@
 import { create } from "@/actions/create-board";
+import { Button } from "@/components/ui/button";
 
 const OrganizationIdPage = () => {
 
@@ -9,9 +10,12 @@ const OrganizationIdPage = () => {
                     id="title"
                     name="title"
                     required
-                    placeholder=" Search a board."
-                    className="w-full border-black border rounded-sm p-1"
+                    placeholder=" Enter a board name."
+                    className="w-[75%] border-black border rounded-sm p-1"
                 />
+                <Button type="submit">
+                    Search
+                </Button>
             </form>
         </div>
     );
