@@ -1,10 +1,13 @@
 import { create } from "@/actions/create-board";
 import { Button } from "@/components/ui/button";
 
-const OrganizationIdPage = () => {
+import { db } from "@/lib/db";
+
+const OrganizationIdPage = async () => {
+    const boards = await db.board.findMany();
 
     return (
-        <div className="w-full">
+        <div className="w-full flex flex-col space-y-4">
             <form action={create}>
                 <input
                     id="title"
@@ -17,6 +20,13 @@ const OrganizationIdPage = () => {
                     Search
                 </Button>
             </form>
+            <div className="space-y-2">
+                {boards.map((board) => (
+                    <div key={board.id}>
+                        Board title: {board.title}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
