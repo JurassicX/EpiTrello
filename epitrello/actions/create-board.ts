@@ -5,8 +5,17 @@ import { z } from "zod"
 import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 
+export type State = {
+    errors?: {
+        title?: string[];
+    },
+    message?: string | null;
+};
+
 const CreateBoard = z.object({
-    title: z.string(),
+    title: z.string().min(3, {
+        message:"Minimum lenght of 3 letters is requiered!"
+    })
 });
 
 export async function create(formData: FormData) {
