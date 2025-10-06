@@ -2,8 +2,8 @@
 
 import { createBoard } from "@/actions/create-board";
 import { FormInput } from "@/components/form/form-input";
+import { FormSubmit } from "@/components/form/form-submit";
 import { useAction } from "@/hooks/use-action";
-import { FormButton } from "./form-button";
 
 export const Form = () => {
     const { execute, fieldErrors} = useAction(createBoard, {
@@ -30,7 +30,9 @@ export const Form = () => {
                     id="title"
                 />
             </div>
-            <FormButton />
+            <FormSubmit>
+                Submit
+            </FormSubmit>
         </form>
     );
 };
