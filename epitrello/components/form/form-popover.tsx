@@ -27,6 +27,21 @@ export const FormPopover = ({
     align,
     sideOffset = 0,
 }: FormPopoverProps) => {
+    const { execute, fieldErrors } = useAction(createBoard, {
+        onSucsess: (data) => {
+            console.log({ data });
+        },
+        onError: (error) => {
+            console.log({ error });
+        }
+    });
+
+    const onSubmit = (formdata: FormData) => {
+        const title = formdata.get("title") as string;
+
+        execute({ title });
+    }
+
     return (
         <Popover>
             <PopoverTrigger asChild>
@@ -49,6 +64,19 @@ export const FormPopover = ({
                         <X className="h-4 w-4" />
                     </Button>
                 </PopoverClose>
+                <form action={onSubmit} className="space-y-4">
+                    <div className="space-y-4">
+                        <FormInput
+                            id="title"
+                            label="Board title"
+                            type="text"
+                            errors={fieldErrors}
+                        />
+                    </div>
+                    <FormSubmit className="w-full">
+                        Create
+                    </FormSubmit>
+                </form>
             </PopoverContent>
         </Popover>
     )
