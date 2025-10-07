@@ -1,4 +1,6 @@
-import { User2 } from "lucide-react";
+import { HelpCircle, User2 } from "lucide-react";
+
+import { Hint } from "@/components/hint";
 
 export const Boardlist = () => {
     return (
@@ -18,6 +20,16 @@ export const Boardlist = () => {
                     <span className="text-xs">
                         5 remaining
                     </span>
+                    <Hint
+                        sideOffset={40}
+                        description={`
+                            Free Workspaces can have up to 5 boards. For unlimited boards, upgrade this Workspace to Premium.
+                        `}
+                    >
+                        <HelpCircle 
+                            className="absolute bottom-2 right-2 h-[14px] w-[14px]"
+                        />
+                    </Hint>
                 </div>
             </div>
         </div>
