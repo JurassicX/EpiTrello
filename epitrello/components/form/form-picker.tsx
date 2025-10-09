@@ -65,7 +65,7 @@ export const FormPicker = ({
             <div className="grid grid-cols-3 gap-2 mb-2">
                 {images.map((image) => (
                     <div
-                        key={image.id} /*check tuto voi si il la mis aussi*/
+                        key={image.id} /*check tuto voir si il la mis aussi*/
                         className={cn(
                             "cursor-pointer relative aspect-video group hover:opacity-75 transition bg-muted",
                             pending && "opacity-50 hover:opacity-50 cursor-auto"
@@ -81,6 +81,7 @@ export const FormPicker = ({
                             name={id}
                             className="hidden"
                             checked={selectedImageId === image.id}
+                            onChange={() => setSelectedImageId(image.id)}
                             disabled={pending}
                             value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}`}
                         />
