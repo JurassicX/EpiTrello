@@ -5,6 +5,7 @@ import { auth } from "@clerk/nextjs/server";
 
 import { db } from "@/lib/db";
 import { Hint } from "@/components/hint";
+import { Skeleton } from "@/components/ui/skeleton";
 import { FormPopover } from "@/components/form/form-popover";
 
 export const Boardlist = async () => {
@@ -67,6 +68,14 @@ export const Boardlist = async () => {
                     </div>
                 </FormPopover>
             </div>
+        </div>
+    );
+};
+
+Boardlist.skeleton = function SkeletonBoardlist() {
+    return (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 animate-pulse">
+            <Skeleton className="aspect-video h-full w-full p-2"/>
         </div>
     );
 };
